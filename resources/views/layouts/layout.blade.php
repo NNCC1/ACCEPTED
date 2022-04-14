@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,19 +15,19 @@
 	
     <title>@yield('title')</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4">
 		<a class="navbar-brand text-white" href="/"><h4>HELLO</h4></a>
 		<div class="containter-fluid flex-grow-1 text-right">
 			<div class = "collapse navbar-collapse">
-				@auth
-										
+				@auth							
 					<ul class = "navbar-nav ms-auto mb-2 text-info">
 						<li class = "nav-item"><a class="nav-link" href="">Giới Thiệu</a></li>
 						<div class="dropdown">
 							<button class="btn btn-secondary dropdown-toggle" type="button"id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">{{Auth::user()->name}}</button>
 							<ul class="dropdown-menu">
-								<li><a class = "dropdown-item " href="{{route('signout')}}">Đăng Xuất</a></li>
+								<li><a class = "dropdown-item " href="{{route('signout')}}"><i class="fa fa-btn fa-sign-out"></i>Đăng Xuất</a></li>
 								<li><a class = "dropdown-item " href="profile">Hồ Sơ</a></li>
 							</ul>
 
@@ -43,9 +44,9 @@
 
 		</div>
 	</nav>
-    <div class="container-fluid">
-        @yield('content')
-    </div>
+    
+    @yield('content')
+
 
 </body>
 </html>
